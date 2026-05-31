@@ -1,0 +1,134 @@
+/* Roblox-inspired dark UI (approximating Builder Sans + #335fff primary). */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+  font-family: "Builder Sans", "HCo Gotham SSm", "Source Sans Pro",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #191b1d;
+  color: #f2f4f5;
+}
+
+.cw-card {
+  padding: 14px 16px 18px;
+}
+
+.cw-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #2e3033;
+}
+
+.cw-logo {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.cw-section {
+  margin-bottom: 16px;
+}
+
+.cw-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #bdc1c5;
+  margin-bottom: 6px;
+}
+
+.cw-preview {
+  width: 100%;
+  height: 96px;
+  border-radius: 8px;
+  background: #25282b center / cover no-repeat;
+  border: 1px solid #2e3033;
+  margin-bottom: 10px;
+}
+
+.cw-row {
+  display: flex;
+  gap: 8px;
+}
+
+/* Roblox-style buttons */
+.cw-btn {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: filter 0.12s ease, background 0.12s ease;
+}
+
+.btn-primary-md {
+  background: #335fff;
+  color: #fff;
+}
+.btn-primary-md:hover {
+  filter: brightness(1.1);
+}
+.btn-primary-md:active {
+  filter: brightness(0.92);
+}
+
+.btn-control-md {
+  background: #393b3d;
+  color: #f2f4f5;
+}
+.btn-control-md:hover {
+  background: #45484a;
+}
+.btn-control-md:active {
+  background: #303234;
+}
+
+.cw-slider-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 12px;
+}
+
+.cw-val {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b8f94;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 4px 0 0;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 4px;
+  background: #2e3033;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #335fff;
+  border: 2px solid #191b1d;
+  box-shadow: 0 0 0 1px #335fff;
+}
+
+.cw-footer {
+  margin-bottom: 0;
+}
+.cw-footer .cw-btn {
+  width: 100%;
+}

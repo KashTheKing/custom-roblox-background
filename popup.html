@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="cw-card">
+      <div class="cw-header">
+        <span class="cw-logo">Custom Roblox Background</span>
+      </div>
+
+      <div class="cw-section">
+        <label class="cw-label">Background image</label>
+        <div class="cw-preview" id="preview"></div>
+        <div class="cw-row">
+          <button class="btn-primary-md cw-btn" id="chooseBtn">
+            Choose photo
+          </button>
+          <button class="btn-control-md cw-btn" id="defaultBtn">
+            Use default
+          </button>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" hidden />
+      </div>
+
+      <div class="cw-section">
+        <div class="cw-slider-head">
+          <label class="cw-label">Darkness</label>
+          <span class="cw-val" id="darknessVal">40%</span>
+        </div>
+        <input type="range" id="darkness" min="0" max="100" value="40" />
+
+        <div class="cw-slider-head">
+          <label class="cw-label">Blur</label>
+          <span class="cw-val" id="blurVal">0px</span>
+        </div>
+        <input type="range" id="blur" min="0" max="30" value="0" />
+
+        <div class="cw-slider-head">
+          <label class="cw-label">Hue</label>
+          <span class="cw-val" id="hueVal">0&deg;</span>
+        </div>
+        <input type="range" id="hue" min="-180" max="180" value="0" />
+
+        <div class="cw-slider-head">
+          <label class="cw-label">Saturation</label>
+          <span class="cw-val" id="saturationVal">100%</span>
+        </div>
+        <input type="range" id="saturation" min="0" max="200" value="100" />
+
+        <div class="cw-slider-head">
+          <label class="cw-label">Brightness</label>
+          <span class="cw-val" id="brightnessVal">100%</span>
+        </div>
+        <input type="range" id="brightness" min="0" max="200" value="100" />
+      </div>
+
+      <div class="cw-section cw-footer">
+        <button class="btn-control-md cw-btn" id="resetBtn">Reset all</button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

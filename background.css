@@ -1,0 +1,36 @@
+/* Background layers injected by content.js. They sit behind the page
+   content (z-index: -1) so Roblox UI stays fully interactive. */
+
+#custom-roblox-bg-layer,
+#custom-roblox-bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#custom-roblox-bg-layer {
+  background-image: var(--custom-bg-url);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(var(--custom-bg-blur, 0px))
+    hue-rotate(var(--custom-bg-hue, 0deg))
+    saturate(var(--custom-bg-saturation, 100%))
+    brightness(var(--custom-bg-brightness, 100%));
+  /* Scale up slightly so blur doesn't reveal transparent edges. */
+  transform: scale(1.06);
+}
+
+#custom-roblox-bg-overlay {
+  background-color: rgba(0, 0, 0, var(--custom-bg-darkness, 0));
+}
+
+/* Let the injected layers show through Roblox's own backgrounds. */
+html.custom-roblox-bg,
+html.custom-roblox-bg body,
+html.custom-roblox-bg #container-main,
+html.custom-roblox-bg .content {
+  background-color: transparent !important;
+  background-image: none !important;
+}
